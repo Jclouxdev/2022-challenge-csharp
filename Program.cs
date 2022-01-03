@@ -7,7 +7,10 @@ namespace TestCSharp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(RemoveSpaces_Exercice.RemoveSpaces("  helloworld  "));
+            string[] table = { "hello", "world" };
+            Console.WriteLine(ConcatEverything_Exercice.ConcatEverything(table));
+            string[] table2 = { "hello", "" };
+            Console.WriteLine(ConcatEverything_Exercice.ConcatEverything(table2));
         }
     }
 }
