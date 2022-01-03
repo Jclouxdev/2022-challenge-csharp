@@ -11,6 +11,7 @@ namespace TestCSharp
             var tab2 = new int[5] { 50, 54, 85, 47, 2 };
             Console.WriteLine(ContainsThisValue_Exercice.ContainsThisValue(tab, 97));
             Console.WriteLine(ContainsThisValue_Exercice.ContainsThisValue(tab2, 51));
+            Console.WriteLine(ContainsThisValue_Exercice.ContainsThisValue(null, 15));
         }
     }
 }
