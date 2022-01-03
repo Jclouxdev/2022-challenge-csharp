@@ -7,7 +7,7 @@ namespace TestCSharp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(HelloWorld_Exercice.HelloWorld());
+            Console.WriteLine(AddTwoIntegers_Exercice.AddTwoIntegers(3, 15));
         }
     }
 }
