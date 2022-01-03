@@ -7,8 +7,7 @@ namespace TestCSharp
     {
         static void Main(string[] args)
         {
-            var inputTab = new int[] { 1, 32, 7, 33 };
-            Console.WriteLine("{0}", string.Join(" ", DoubleArrayForEvenInteger_Exercice.DoubleArrayForEvenInteger(inputTab)));
+            Console.WriteLine(GetStringSize_Exercice.GetStringSize("helloworld"));
         }
     }
 }
