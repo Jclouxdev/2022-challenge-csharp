@@ -7,7 +7,8 @@ namespace TestCSharp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(SpellItBackwards_Exercice.SpellItBackward("helloworld"));
+            var inputTab = new int[] { 1, 32, 7, 33 };
+            Console.WriteLine("{0}", string.Join(" ", DoubleArrayForEvenInteger_Exercice.DoubleArrayForEvenInteger(inputTab)));
         }
     }
 }
