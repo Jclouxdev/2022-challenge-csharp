@@ -26,7 +26,6 @@ namespace CSharpDiscovery.Quest02
                     i++;
                 }
             }
-            Console.WriteLine(dictionary.Count);
             return dictionary;
         }
     }
