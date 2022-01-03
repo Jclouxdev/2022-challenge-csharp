@@ -7,7 +7,7 @@ namespace TestCSharp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Capitalize_Exercice.Capitalize("helloworld"));
+            Console.WriteLine(RemoveSpaces_Exercice.RemoveSpaces("  helloworld  "));
         }
     }
 }
