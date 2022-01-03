@@ -7,10 +7,8 @@ namespace TestCSharp
     {
         static void Main(string[] args)
         {
-            string[] table = { "hello", "world" };
-            Console.WriteLine(ConcatEverything_Exercice.ConcatEverything(table));
-            string[] table2 = { "hello", "" };
-            Console.WriteLine(ConcatEverything_Exercice.ConcatEverything(table2));
+            Console.WriteLine(ContainsSpecificSubstring_Exercice.ContainsSpecificSubstring("helloworld", "hello"));
+            Console.WriteLine(ContainsSpecificSubstring_Exercice.ContainsSpecificSubstring("helloworld", "monde"));
         }
     }
 }
