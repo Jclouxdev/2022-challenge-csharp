@@ -1,5 +1,4 @@
 using System;
-using System.Windows;
 namespace CSharpDiscovery.Quest03 {
     public class PointOfInterest {
         public double Latitude { get; set; }
@@ -27,6 +26,50 @@ namespace CSharpDiscovery.Quest03 {
         public override string ToString() {
             var str = Name+" (Lat="+Latitude+", Long="+Longitude+")";
             return str;
+        }
+
+        public double GetDistance(PointOfInterest other)
+        {
+            double latA = Latitude;
+            double longA = Longitude;
+            double latB = other.Latitude;
+            double longB = other.Longitude;
+            
+            var baseRad = Math.PI * latA / 180;
+            var targetRad = Math.PI * latB / 180;
+            var theta = longA - longB;
+            var thetaRad = Math.PI * theta / 180;
+
+            var distance = Math.Sin(baseRad) * Math.Sin(targetRad) + Math.Cos(baseRad) *
+            Math.Cos(targetRad) * Math.Cos(thetaRad);
+            distance = Math.Acos(distance);
+
+            distance = distance * 180 / Math.PI;
+            distance = distance * 60 * 1.1515;
+
+            return Math.Round(distance * 1.609344);
+        }
+
+        public static double GetDistance(PointOfInterest p1, PointOfInterest p2)
+        {
+            double latA = p1.Latitude;
+            double longA = p1.Longitude;
+            double latB = p2.Latitude;
+            double longB = p2.Longitude;
+            
+            var baseRad = Math.PI * latA / 180;
+            var targetRad = Math.PI * latB / 180;
+            var theta = longA - longB;
+            var thetaRad = Math.PI * theta / 180;
+
+            var distance = Math.Sin(baseRad) * Math.Sin(targetRad) + Math.Cos(baseRad) *
+            Math.Cos(targetRad) * Math.Cos(thetaRad);
+            distance = Math.Acos(distance);
+
+            distance = distance * 180 / Math.PI;
+            distance = distance * 60 * 1.1515;
+
+            return Math.Round(distance * 1.609344);
         }
     }
 }
