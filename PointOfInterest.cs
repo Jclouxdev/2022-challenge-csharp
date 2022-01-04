@@ -1,3 +1,4 @@
+using System;
 namespace CSharpDiscovery.Quest03 {
     public class PointOfInterest {
         public double Latitude { get; set; }
@@ -14,6 +15,13 @@ namespace CSharpDiscovery.Quest03 {
             Latitude = m_latitude;
             Longitude = m_longitude;
             Name = m_name;
+        }
+
+        public string GetGoogleMapsUrl() {
+            var localisation = Name.Replace(" ", "+");
+            var url = "https://www.google.com/maps/place/"+localisation+"/@"+Latitude+","+Longitude+",15z/";
+            return url;
+            //https://www.google.com/maps/place/Bordeaux+Ynov+Campus/@44.854186,-0.5663056,15z/
         }
     }
 }
