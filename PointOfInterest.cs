@@ -28,7 +28,7 @@ namespace CSharpDiscovery.Quest03 {
             return str;
         }
 
-        public double GetDistance(PointOfInterest other)
+        public int GetDistance(PointOfInterest other)
         {
             double latA = Latitude;
             double longA = Longitude;
@@ -47,10 +47,13 @@ namespace CSharpDiscovery.Quest03 {
             distance = distance * 180 / Math.PI;
             distance = distance * 60 * 1.1515;
 
-            return Math.Round(distance * 1.609344);
+            double calc = Math.Round(distance * 1.609344);
+            int cast;
+            cast = (int)calc;
+            return cast;
         }
 
-        public static double GetDistance(PointOfInterest p1, PointOfInterest p2)
+        public static int GetDistance(PointOfInterest p1, PointOfInterest p2)
         {
             double latA = p1.Latitude;
             double longA = p1.Longitude;
@@ -69,7 +72,10 @@ namespace CSharpDiscovery.Quest03 {
             distance = distance * 180 / Math.PI;
             distance = distance * 60 * 1.1515;
 
-            return Math.Round(distance * 1.609344);
+            double calc = Math.Round(distance * 1.609344);
+            int cast;
+            cast = (int)calc;
+            return cast;
         }
     }
 }
