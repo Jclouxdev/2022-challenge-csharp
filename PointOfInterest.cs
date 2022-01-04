@@ -1,4 +1,5 @@
 using System;
+using System.Windows;
 namespace CSharpDiscovery.Quest03 {
     public class PointOfInterest {
         public double Latitude { get; set; }
@@ -21,7 +22,11 @@ namespace CSharpDiscovery.Quest03 {
             var localisation = Name.Replace(" ", "+");
             var url = "https://www.google.com/maps/place/"+localisation+"/@"+Latitude+","+Longitude+",15z/";
             return url;
-            //https://www.google.com/maps/place/Bordeaux+Ynov+Campus/@44.854186,-0.5663056,15z/
+        }
+
+        public override string ToString() {
+            var str = Name+" (Lat="+Latitude+", Long="+Longitude+")";
+            return str;
         }
     }
 }
