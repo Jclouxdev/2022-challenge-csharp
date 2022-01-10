@@ -4,16 +4,16 @@ namespace CSharpDiscovery.Quest04 {
         public int GetFuelLevel() {
             return FuelLevel;
         }
-        public int SetFuelLevel() {
-          return 100;
+        public void SetFuelLevel() {
+            FuelLevel = 100;
         }
 
         public int BatteryLevel { get; set; }
         public int GetBatteryLevel() {
             return BatteryLevel;
         }
-        public int SetBatteryLevel() {
-          return 100;
+        public void SetBatteryLevel() {
+            BatteryLevel = 100;
         }
 
         public void FillUp() {
