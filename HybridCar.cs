@@ -41,7 +41,7 @@ namespace CSharpDiscovery.Quest04 {
         }
 
         public override string ToString() {
-            var str = Color + " " + Brand + " " + Model + ", Battery: " + BatteryLevel + "%, Fuel:" + FuelLevel + "%";
+            var str = Color + " " + Brand + " " + Model + ", Battery: " + BatteryLevel + "%, Fuel: " + FuelLevel + "%";
             return str;
         }
     }
