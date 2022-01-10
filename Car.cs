@@ -23,5 +23,20 @@ namespace CSharpDiscovery.Quest04 {
             return str;
             //"(Color) (Brand) (Model)"
         }
-  }
+
+        public override void Accelerate(int number) {
+            if(CurrentSpeed < 180) {
+                if((CurrentSpeed + number) < 180) {
+                    CurrentSpeed += number;
+                } else CurrentSpeed = 180;
+            }
+            else CurrentSpeed = 180;
+        }
+
+        public override void Brake(int number) {
+            if((CurrentSpeed - number) > 0) {
+                CurrentSpeed -= number;
+            } else CurrentSpeed = 0;
+        }
+    }
 }
