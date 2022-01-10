@@ -25,17 +25,19 @@ namespace CSharpDiscovery.Quest04 {
 
         public override void Accelerate(int number) {
             if(CurrentSpeed < 180) {
-                if((CurrentSpeed + number) < 180) {
+                /*if((CurrentSpeed + number) < 180) {
                     CurrentSpeed += number;
-                } else CurrentSpeed = 180;
+                } else CurrentSpeed = 180;*/
+                CurrentSpeed = (CurrentSpeed + number) < 180 ? CurrentSpeed + number : 180;
             }
             else CurrentSpeed = 180;
         }
 
         public override void Brake(int number) {
-            if((CurrentSpeed - number) > 0) {
+            /*if((CurrentSpeed - number) > 0) {
                 CurrentSpeed -= number;
-            } else CurrentSpeed = 0;
+            } else CurrentSpeed = 0;*/
+            CurrentSpeed = (CurrentSpeed - number) > 0 ? CurrentSpeed - number : 0;
         }
     }
 }
