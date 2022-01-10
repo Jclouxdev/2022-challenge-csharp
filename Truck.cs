@@ -1,35 +1,35 @@
 namespace CSharpDiscovery.Quest04 {
-  public class Car : Vehicule {
-      public string Model { get; set; }
+    public class Truck : Vehicule {
+        public int Tonnage { get; set; }
 
-        public Car() 
+        public Truck() 
         { 
             Brand = "Unknown";
             Color = "Unknown";
             CurrentSpeed = 0;
-            Model = "Unknown";
+            Tonnage = 0;
         }
 
-        public Car(string m_model, string m_brand, string m_color,  int m_speed = 0) : base()
+        public Truck(int m_tonnage, string m_brand, string m_color,  int m_speed = 0) : base()
         {
-            Model = m_model;
+            Tonnage = m_tonnage;
             Brand = m_brand;
             Color = m_color;
             CurrentSpeed = m_speed;
         }
 
         public override string ToString() {
-            var str = Color + " " + Brand + " " + Model;
+            var str = Color + " " + Brand + " " + Tonnage +"T Truck";
             return str;
         }
 
         public override void Accelerate(int number) {
-            if(CurrentSpeed < 180) {
-                if((CurrentSpeed + number) < 180) {
+            if(CurrentSpeed < 100) {
+                if((CurrentSpeed + number) < 100) {
                     CurrentSpeed += number;
-                } else CurrentSpeed = 180;
+                } else CurrentSpeed = 100;
             }
-            else CurrentSpeed = 180;
+            else CurrentSpeed = 100;
         }
 
         public override void Brake(int number) {
