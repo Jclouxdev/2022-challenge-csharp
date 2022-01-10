@@ -1,19 +1,13 @@
 namespace CSharpDiscovery.Quest04 {
     public class HybridCar : Car, IThermalCar, IElectricCar {
-        public int FuelLevel { get; set; }
+        public int FuelLevel { get; set; } = 100;
         public int GetFuelLevel() {
             return FuelLevel;
         }
-        public void SetFuelLevel() {
-            FuelLevel = 100;
-        }
 
-        public int BatteryLevel { get; set; }
+        public int BatteryLevel { get; set; } = 100;
         public int GetBatteryLevel() {
             return BatteryLevel;
-        }
-        public void SetBatteryLevel() {
-            BatteryLevel = 100;
         }
 
         public void FillUp() {
