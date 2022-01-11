@@ -1,4 +1,5 @@
 ﻿using CSharpDiscovery.Quest04;
+using System;
 
 namespace TestCSharp
 {
@@ -6,9 +7,15 @@ namespace TestCSharp
     {
         static void Main(string[] str)
         {
-            var RandomCar = new Car();
-            var Megane = new Car("Mégane", "Renault", "Yellow", 50);
+            var i8 = new HybridCar("i8", "BMW", "White");
+            i8.BatteryLevel = 60;
+            i8.FuelLevel = 80;
             Vehicule.WhoIsHere();
+
+            i8.Recharge();
+            i8.FillUp();
+            Console.WriteLine(i8.GetBatteryLevel());
+            Console.WriteLine(i8.GetFuelLevel());
         }
     }
 }

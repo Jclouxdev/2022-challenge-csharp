@@ -26,12 +26,12 @@ namespace CSharpDiscovery.Quest04 {
             Model = "Unknown";
         }
 
-        public HybridCar(string m_model, string m_brand, string m_color,  int m_speed = 0) : base()
+        public HybridCar(string m_model, string m_brand, string m_color,  int m_speed = 0) : base(m_model, m_brand, m_color, m_speed)
         {
-            Model = m_model;
+            /*Model = m_model;
             Brand = m_brand;
             Color = m_color;
-            CurrentSpeed = m_speed;
+            CurrentSpeed = m_speed;*/
         }
 
         public override string ToString() {
