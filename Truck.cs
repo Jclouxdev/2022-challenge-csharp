@@ -10,12 +10,9 @@ namespace CSharpDiscovery.Quest04 {
             Tonnage = 0;
         }
 
-        public Truck(int m_tonnage, string m_brand, string m_color,  int m_speed = 0) : base()
+        public Truck(int m_tonnage, string m_brand, string m_color,  int m_speed = 0) : base(m_brand, m_color, m_speed)
         {
             Tonnage = m_tonnage;
-            Brand = m_brand;
-            Color = m_color;
-            CurrentSpeed = m_speed;
         }
 
         public override string ToString() {
