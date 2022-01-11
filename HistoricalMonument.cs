@@ -5,11 +5,8 @@ namespace CSharpDiscovery.Quest03 {
         public HistoricalMonument() 
         { }
 
-        public HistoricalMonument(string m_name, double m_latitude, double m_longitude,  int m_buildYear) : base()
+        public HistoricalMonument(string m_name, double m_latitude, double m_longitude,  int m_buildYear) : base(m_name, m_latitude, m_longitude)
         {
-            Name = m_name;
-            Latitude = m_latitude;
-            Longitude = m_longitude;
             BuildYear = m_buildYear;
         }
 

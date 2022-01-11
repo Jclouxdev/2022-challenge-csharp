@@ -1,5 +1,5 @@
-﻿using CSharpDiscovery.Quest04;
-using System;
+﻿using System;
+using CSharpDiscovery.Quest03;
 
 namespace TestCSharp
 {
@@ -7,15 +7,8 @@ namespace TestCSharp
     {
         static void Main(string[] str)
         {
-            var i8 = new HybridCar("i8", "BMW", "White");
-            i8.BatteryLevel = 60;
-            i8.FuelLevel = 80;
-            Vehicule.WhoIsHere();
-
-            i8.Recharge();
-            i8.FillUp();
-            Console.WriteLine(i8.GetBatteryLevel());
-            Console.WriteLine(i8.GetFuelLevel());
+            PointOfInterest PorteCailhau = new HistoricalMonument("Porte Cailhau", 44.838336, -0.569446, 1493);
+            Console.WriteLine(PorteCailhau.ToString());
         }
     }
 }
